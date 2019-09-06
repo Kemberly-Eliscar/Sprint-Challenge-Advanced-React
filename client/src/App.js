@@ -1,8 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import PlayerList from './Components/PlayerList'
+import 'semantic-ui-css/semantic.min.css'
 
-function App() {
+
+
+ export default function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -23,4 +27,4 @@ function App() {
   );
 }
 
-export default App;
+
