@@ -1,12 +1,67 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+import "semantic-ui-css/semantic.min.css";
+import "./index.css";
+import App from "./Components/App";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <Router>
+    <App />
+  </Router>,
+  document.getElementById("root")
+);
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+
+//   state = {
+//     data: [],
+//     dataText: ''
+//   }
+
+//   componentDidMount() {
+//     fetch('https://googletrends.github.io/data/')
+//       .then(res => res.json())
+//       .then(res => this.setState({data: res.message }));
+
+
+//   handleChange = event => {
+//     this.setState({
+//       dataText: event.target.value
+//     });
+//   };
+
+//   fetchData = e => {
+//   fetch('https://googletrends.github.io/data/')
+//       .then(res => res.json())
+//       .then(res => this.setState({data: res.message }))
+//       .catch(err => console.log('noo'));
+// }
+
+//   render() {
+//   return (
+//     <div className="App">
+//       <h1>Hello Data</h1>
+//       <input 
+//       type="text" 
+//       value={this.state.dataText}
+//       onChange={this.handleChange}
+//       />
+
+//       <button onClick={this.fetchData}>Fetch Data</button>
+//       <div className='data'>
+//       {this.state.data.map(data => (
+//         <img width='200' src={data} key={data} alt={data} />
+//       ))}
+//       </div>
+//     </div>
+//   );
+// }
+// }
+
+// const rootElement = document.getElementById("root");
+// ReactDOM.render(<App />, rootElement);
+
+// // .then(res => res.json())
+// //       .then(dogs => this.setState({ doggos: dogs.message}))
+// //       .catch(err => console.log('nooo'));
+// //   
